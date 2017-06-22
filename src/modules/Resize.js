@@ -71,6 +71,7 @@ export class Resize extends BaseModule {
     handleMouseup = () => {
         // reset cursor everywhere
         this.setCursor('');
+        this.requestUpdate();
         // stop listening for movement and mouseup
         document.removeEventListener('mousemove', this.handleDrag);
         document.removeEventListener('mouseup', this.handleMouseup);
